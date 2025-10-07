@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8">
+<button id="load">Cargar</button>
+<ul id="list"></ul>
+<script>
+const BASE='https://your-mama-092f.onrender.com';
+document.getElementById('load').onclick=async()=>{
+  const r=await fetch(`${BASE}/chistes`);
+  const a=await r.json();
+  document.getElementById('list').innerHTML=a.map(x=>`<li>${x.id}: ${x.chiste}</li>`).join('');
+};
+</script>
