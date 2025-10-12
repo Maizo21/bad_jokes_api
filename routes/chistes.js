@@ -14,7 +14,7 @@ function isNotEmpty(req, res, next) {
     const t = s.trim();
     if (!t) return res.status(400).json({ error: 'El chiste no puede estar vacio' });
     if (t.length > 300) return res.status(413).json({ error: 'Máximo 300 caracteres' });
-    req.body.joke = t; // normalizado
+    req.body.joke = t;
     next();
 }
 
@@ -41,7 +41,6 @@ router.get('/chistes', (req, res) => {
         return res.status(200).json(dataObj[index]);
     }
 
-    // Buscar por id
     const item = dataObj.find(x => String(x.id) === String(id));
     if (!item) return res.status(404).json({ error: 'Chiste no encontrado' });
 
