@@ -7,7 +7,7 @@ Incluye **CORS**, validaciones de entrada y persistencia simple en archivo `dev-
 
 ## 🚀 URL Base
 
-- Producción (Railway): `https://https://badjokesapi-production.up.railway.app/`
+- Producción (Railway): `https://badjokesapi-production.up.railway.app/`
 - Local: `http://localhost:8000`
 
 ---
@@ -97,7 +97,7 @@ Devuelve **todo** el arreglo de chistes.
 
 **Ejemplo (cURL)**
 
-    curl -s https://https://badjokesapi-production.up.railway.app/
+    curl -s https://badjokesapi-production.up.railway.app/
 
 **200 OK – ejemplo de respuesta**
 
@@ -118,13 +118,13 @@ Devuelve todos los chistes o **uno** si pasas `id`.
 **Ejemplos (cURL)**
 
     # Todos
-    curl -s https://https://badjokesapi-production.up.railway.app/chistes
+    curl -s https://badjokesapi-production.up.railway.app/chistes
 
     # Por índice (posición 2 del arreglo)
-    curl -s "https://https://badjokesapi-production.up.railway.app/chistes?id=2"
+    curl -s "https://badjokesapi-production.up.railway.app/chistes?id=2"
 
     # Por id exacto (UUID o número)
-    curl -s "https://https://badjokesapi-production.up.railway.app/chistes?id=7d6b4a40-6f7b-4c1a-8a7a-a9f6f7a2c3b1"
+    curl -s "https://badjokesapi-production.up.railway.app/chistes?id=7d6b4a40-6f7b-4c1a-8a7a-a9f6f7a2c3b1"
 
 **404 Not Found – ejemplo**
 
@@ -140,7 +140,7 @@ Crea un nuevo chiste.
 
 **Ejemplo (cURL)**
 
-    curl -X POST "https://https://badjokesapi-production.up.railway.app/chisteNuevo" \
+    curl -X POST "https://badjokesapi-production.up.railway.app/chisteNuevo" \
       -H "Content-Type: application/json" \
       -d '{"joke":"Tu mamá es tan..."}'
 
@@ -169,10 +169,10 @@ Elimina un chiste por **id exacto** (coincide con el campo `id` del objeto).
 **Ejemplos (cURL)**
 
     # Borrar por id numérico (registro inicial)
-    curl -X DELETE "https://https://badjokesapi-production.up.railway.app/chistes/0"
+    curl -X DELETE "https://badjokesapi-production.up.railway.app/chistes/0"
 
     # Borrar por UUID
-    curl -X DELETE "https://https://badjokesapi-production.up.railway.app/chistes/7d6b4a40-6f7b-4c1a-8a7a-a9f6f7a2c3b1"
+    curl -X DELETE "https://badjokesapi-production.up.railway.app/chistes/7d6b4a40-6f7b-4c1a-8a7a-a9f6f7a2c3b1"
 
 **200 OK – ejemplo de respuesta**
 
@@ -200,7 +200,7 @@ Cualquier ruta no contemplada responde:
 
 ## 🧪 Cheatsheet (cURL)
 
-    BASE="https://https://badjokesapi-production.up.railway.app/
+    BASE="https://badjokesapi-production.up.railway.app/
 
     # Listar todos
     curl "$BASE/"
